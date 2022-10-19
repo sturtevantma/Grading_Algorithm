@@ -2,5 +2,8 @@
 A grading algorithm for CSC 212 review project
 
 Group members:
-Nathan Fernandes
+Nathan Fernandes,
+Matthew Sturtevant,
+Michael Newton,
+Dean Geraci
 
