@@ -2,31 +2,70 @@
 A grading algorithm for CSC 212 review project
 
 Group members:
-Nathan Fernandes,
-Matthew Sturtevant,
-Michael Newton,
-Dean Geraci
+Nathan Fernandes
+
+Pseudocode for course.cpp:
+
+class Course {
+private:
+  int grade
+  String letter
+  double weight
+  Vector<Task> taskVec
+  
+  public:
+  
+  Course(String Name, String desc)
+  
+  
+  double calcGrade(name)
+  //Calculate grade based on tasks
+  if name = "homeWork"
+      Calculate grade
+  
+  String Name()
+  //Get name of the course
+  this->name = name
+  
+  int weight_achieved()
+  //Find weight achieved based on weight for task
+  
+  
+  String addTask(String name, String desc, double weight)
+  //Add Task name to Task Vector
+  
+  
+  int add_grade()
+  //Get grade
+  
+  int calcGradeLetter()
+  //Find grade letter based on percentage
+  if grade >= 90 
+      letter = "A"
+  if grade >= 80 and grade < 90 
+      letter = "B"
+  if grade >= 70 and grade < 80
+      letter = "C"
+  if grade >= 60 and grade < 70
+      letter = "D"
+  if grade < 60 
+      letter = "F"
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
-
-# Documentation
-
-### Course
-Course is a class that helps store and calculate information about the grades in a given course  
-`Course::task_list`  
-Contains all task objects under the command of course. See [Task](#Task)  
-`Course::NAME`  
-The name of the course (possibly useful for indexing a list of classes)  
-`Course::DESC`  
-A description of the course, useful for displaying info on multiple courses  
-`Course::weight_achieved`  
-A float, should usually exist on the domain [0,1] although it is worth noting that higher grades may be able to be achieved in classes that offer extra credit  
-`Course::calc_grade()`  
-Returns a float that contains your grade/100  
-`Course::calc_grade_letter()`  
-Returns the corresponding letter grade to the number returned by `Course::calc_grade()`  
-`Course::add_task()`  
-Appends a new task to the list  
-`Course::add_grade()`  
-Adds achieved weight to a task. See [Task](#Task)  
 
