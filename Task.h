@@ -15,4 +15,5 @@ class Task{
         std::string description;
         Task(std::string name, std::string description, float weight );
 
+    friend class Course;
 };
