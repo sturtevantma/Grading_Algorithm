@@ -1,56 +1,44 @@
 //
-// Created by Nathan Fernandes on 10/26/22.
+// Created by Nathan Fernandes on 10/27/22.
 //
 
-#include "Task.h"
-#include <vector>
+#include "course.h"
 #include <string>
 
-class Course {
-private:
-    std::vector<Task> task_list;
-    int grade;
 
-public:
-    Course(std::string cName, std::string cDesc, int cGrade){
+Course::Course(float cFinal_Grade) {
+    this->final_Grade = cFinal_Grade;
+}
+
+Course::Course(std::string cLetter, float cGrade, float cWeight) {
         this->grade = cGrade;
+        this->letter = cLetter;
+        this->weight = cWeight;
     }
 
-    float calc_grade(std::string name){
-        return grade;
-    }
-    std::string calc_grade_letter(std::string name, int grade){
-        std::string letter;
 
-        if (grade >= 90 ) {
+
+    float Course::calc_grade() {
+        float newGrade = grade * weight;
+
+        return newGrade * 100;
+    }
+
+    std::string Course::calc_grade_letter() {
+
+        if (final_Grade >= 90) {
             letter = "A";
-        }
-        else if (grade >= 80 && grade < 90) {
+        } else if (final_Grade >= 80 && final_Grade < 90) {
             letter = "B";
-        }
-        else if (grade >= 70 && grade < 80) {
+        } else if (final_Grade >= 70 && final_Grade < 80) {
             letter = "C";
-        }
-        else if (grade >= 60 && grade < 70) {
+        } else if (final_Grade >= 60 && final_Grade < 70) {
             letter = "D";
-        }
-        else if (grade < 60) {
+        } else if (final_Grade < 60) {
             letter = "F";
         }
         return letter;
-
-
     }
-    void add_task(std::string name, std::string desc, float weight){
-
+    float Course::add_Vector() {
+        return weight * 100;
     }
-    void add_grade(std::string name, float weight_achieved){
-
-    }
-
-    const std::string NAME;
-    const std::string DESC;
-    float weight_achieved;
-
-
-}
