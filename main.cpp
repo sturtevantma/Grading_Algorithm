@@ -12,6 +12,11 @@ int main() {
 
     std::cout << "Number grade: " << final_grade << std::endl;
     std::cout << "Letter grade: " << letterGrade << std::endl;
+    CSC_212.add_task("Labs" , "5%", 0.05);
+    CSC_212.add_task("Programming Assignments" , "50%", 0.50);
+    CSC_212.add_task("Term Project" , "35%", 0.35);
+    CSC_212.add_task("Final Exam" , "10%", 0.1);
+    CSC_212.add_task("Review Project" , "3%", 0.03);
 
     return 0;
 }
