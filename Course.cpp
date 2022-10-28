@@ -9,19 +9,19 @@ Course::Course(std::string cName, std::string cDesc) {
 
 float Course::calc_grade() {
     // Calculates the total grade of the student
-    float total = 0;
+    float total;
     // Calculate weighted average
     for(Task t: this->task_list) {
         total += t.grade * t.weight;
     }
     // Set weight_achieved to equal the grade in the course then return the grade
-    this->weight_achieved;
-    return total;
+    this->weight_achieved = total;
+    return total * 100;
 }
 
 std::string Course::calc_grade_letter() {
     // Calculate a letter grade (also runs Course::calc_grade())
-    float grade = this->calc_grade() * 100;
+    float grade = this->weight_achieved * 100;
     if(grade >= 94) {
         return "A";
     } else if(grade >= 90) {
