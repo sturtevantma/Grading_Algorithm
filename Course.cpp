@@ -8,16 +8,20 @@ Course::Course(std::string cName, std::string cDesc) {
 }
 
 float Course::calc_grade() {
+    // Calculates the total grade of the student
     float total = 0;
+    // Calculate weighted average
     for(Task t: this->task_list) {
         total += t.grade * t.weight;
     }
+    // Set weight_achieved to equal the grade in the course then return the grade
     this->weight_achieved;
     return total;
 }
 
 std::string Course::calc_grade_letter() {
-    float grade = this->calc_grade();
+    // Calculate a letter grade (also runs Course::calc_grade())
+    float grade = this->calc_grade() * 100;
     if(grade >= 94) {
         return "A";
     } else if(grade >= 90) {
@@ -45,11 +49,14 @@ std::string Course::calc_grade_letter() {
 }
 
 void Course::add_task(std::string name, std::string desc, float weight) {
+    // Adds a task into the task_list
     Task temp(name, desc, weight);
     this->task_list.push_back(temp);
 }
 
 void Course::add_grade(std::string name, float weight_achieved) {
+    // Adds a grade into the specified task, throws exception if the Task does not exist
+    // Also calculates a new grade for the task and stores it
     Task* current = nullptr;
     for(Task t : this->task_list) {
         if(t.name == name) {
@@ -60,7 +67,7 @@ void Course::add_grade(std::string name, float weight_achieved) {
     if(current == nullptr) {
         throw;
     }
-    
+
     current->grade_list.push_back(weight_achieved);
     float total = 0;
     for(float i : current->grade_list) {
