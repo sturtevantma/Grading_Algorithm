@@ -1,22 +1,34 @@
-#include "Task.h"
+//
+// Created by Nathan Fernandes on 10/27/22.
+//
+
+#ifndef REVIEW_PROJECT_COURSE_H
+#define REVIEW_PROJECT_COURSE_H
+
+
 #include <vector>
 #include <string>
 
 class Course {
-    private:
-        std::vector<Task> task_list;
-        
-    public:
-        Course(std::string cName, std::string cDesc);
+private:
+    std::vector<float> weight_list;
+    std::vector<int> grade_list;
+    float grade;
+    std::string letter;
+    float weight;
+    float final_Grade;
 
-        float calc_grade(std::string name);
-        std::string calc_grade_letter(std::string name);
-        void add_task(std::string name, std::string desc, float weight);
-        void add_grade(std::string name, float weight_achieved);
+public:
+    Course(float cFinal_Grade);
+    Course(std::string cName, float cGrade, float cWeight);
 
-        const std::string NAME;
-        const std::string DESC;
-        float weight_achieved;
-    
+    float calc_grade();
+    std::string calc_grade_letter();
+    float add_Vector();
 
-}
+
+
+
+};
+
+#endif //REVIEW_PROJECT_COURSE_H
