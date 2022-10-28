@@ -35,15 +35,15 @@ Returns the corresponding letter grade to the number returned by `Course::calc_g
 Appends a new task to the list  
 `Course::add_grade()`  
 Adds achieved weight to a task. See [Task](#Task)  
-`Course::get_num_grade()`. 
-Returns the product of the weight and 100. 
+`Course::get_num_grade()`
+Returns the product of the weight and 100
 
 ### Task
-Task is a container for all info about what the courses are and what grades they have. 
-`Task::weight`. 
+Task is a container for all info about what the courses are and what grades they have
+`Task::weight`
 Contains the amount of weight a grade will recieve. 
-`Task::grade_list`. 
+`Task::grade_list`
 Contains a list of every grade in a category. 
-`Task::grade`. 
+`Task::grade`
 
 
