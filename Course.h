@@ -1,37 +1,22 @@
-//
-// Created by Nathan Fernandes on 10/27/22.
-//
-
-#ifndef REVIEW_PROJECT_COURSE_H
-#define REVIEW_PROJECT_COURSE_H
-
-
+#include "Task.h"
 #include <vector>
 #include <string>
 
 class Course {
-private:
-    std::vector<float> weight_list;
-    std::vector<int> grade_list;
-    float grade;
-    std::string letter;
-    float weight;
-    float final_Grade;
+    private:
+        std::vector<Task> task_list;
 
-public:
-    //First type of Course, which has the final grade already with weights taken into account
-    Course(float cFinal_Grade);
+    public:
+        Course(std::string cName, std::string cDesc);
 
-    //Second type of Course, which takes in the name of the category, the student's average in the category, and the weight of the category
-    Course(std::string cName, float cGrade, float cWeight);
+        float calc_grade(std::string name);
+        std::string calc_grade_letter(std::string name);
+        void add_task(std::string name, std::string desc, float weight);
+        void add_grade(std::string name, float weight_achieved);
 
-    float calc_grade();
-    std::string calc_grade_letter();
-    float get_num_grade();
-
-
+        std::string NAME;
+        std::string DESC;
+        float weight_achieved;
 
 
 };
-
-#endif //REVIEW_PROJECT_COURSE_H
