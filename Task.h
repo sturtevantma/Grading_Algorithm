@@ -5,7 +5,7 @@ class Task{
     private:
 
         float weight;
-        float weight_achieved;
+        std::vector<float> grade_list;
         float grade;
 
     public:
