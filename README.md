@@ -7,7 +7,13 @@ Matthew Sturtevant,
 Michael Newton,
 Dean Geraci
 
+# Summary and Repo Address
 
+This is a program which calculated a student's weighted average for CSC 212 by using the student's grade in each
+category as well as the weight of each category as a part of the entire grade. The output of the program is both
+A numerical representation and the letter grade corresponding with it.
+
+Repo Address: 
 
 # Documentation
 
