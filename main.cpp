@@ -7,6 +7,7 @@ int main() {
     //Initialization of the various parts of the course which are weighted differently
     Course CSC_212("CSC_212", "Class Discussing Data Structures and Algorithms");
 
+
     CSC_212.add_task("Labs" , "5%", 0.05);
     CSC_212.add_task("Programming Assignments" , "50%", 0.50);
     CSC_212.add_task("Term Project" , "35%", 0.35);
