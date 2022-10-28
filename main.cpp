@@ -10,7 +10,7 @@ int main() {
     float final_grade = CSC_212.calc_grade();
     std::string letterGrade = CSC_212.calc_grade_letter();
 
-    std::cout << "Number grade: " << final_grade << std::endl;
+    std::cout << "Number grade: " << final_grade * 100 << std::endl;
     std::cout << "Letter grade: " << letterGrade << std::endl;
     CSC_212.add_task("Labs" , "5%", 0.05);
     CSC_212.add_task("Programming Assignments" , "50%", 0.50);

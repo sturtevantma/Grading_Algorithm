@@ -15,13 +15,13 @@ float Course::calc_grade() {
         total += t.grade * t.weight;
     }
     // Set weight_achieved to equal the grade in the course then return the grade
-    this->weight_achieved;
+    this->weight_achieved = total;
     return total;
 }
 
 std::string Course::calc_grade_letter() {
     // Calculate a letter grade (also runs Course::calc_grade())
-    float grade = this->calc_grade() * 100;
+    float grade = this->weight_achieved * 100;
     if(grade >= 94) {
         return "A";
     } else if(grade >= 90) {
