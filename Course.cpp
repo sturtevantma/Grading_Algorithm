@@ -5,7 +5,6 @@
 #include "course.h"
 #include <string>
 
-
 Course::Course(float cFinal_Grade) {
     this->final_Grade = cFinal_Grade;
 }
@@ -17,13 +16,14 @@ Course::Course(std::string cLetter, float cGrade, float cWeight) {
     }
 
 
-
+    //Calculates a new grade based on the old grade and weight
     float Course::calc_grade() {
         float newGrade = grade * weight;
 
         return newGrade * 100;
     }
 
+    //References the final grade value, and returns the letter correspondant based on the Syllabus numbers
     std::string Course::calc_grade_letter() {
 
         if (final_Grade >= 94) {
