@@ -27,7 +27,7 @@ public:
 
     float calc_grade();
     std::string calc_grade_letter();
-    float add_Vector();
+    float get_num_grade();
 
 
 

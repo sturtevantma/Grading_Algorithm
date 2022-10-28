@@ -17,19 +17,19 @@ int main() {
     //The next four calls all multiply the weight from a percent to a number so that it can be referenced in multiplying the actual grade value later
     //These values are pushed onto a vector which is referenced later on
     //Call 1
-    float hwW = homeWorkGrade.add_Vector();
+    float hwW = homeWorkGrade.get_num_grade();
     weightVec.push_back(hwW);
 
     //Call 2
-    float labW = labGrade.add_Vector();
+    float labW = labGrade.get_num_grade();
     weightVec.push_back(labW);
 
     //Call 3
-    float examW = examGrade.add_Vector();
+    float examW = examGrade.get_num_grade();
     weightVec.push_back(examW);
 
     //Call 4
-    float projectW = projectGrade.add_Vector();
+    float projectW = projectGrade.get_num_grade();
     weightVec.push_back(projectW);
 
     //The next four calls reference the weight and actually calculates the grade based on the weight
