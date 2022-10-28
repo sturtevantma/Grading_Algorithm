@@ -1,5 +1,6 @@
 #include "Course.h"
 #include <string>
+#include <iostream>
 
 Course::Course(std::string cName, std::string cDesc) {
     this->NAME = cName;
@@ -8,6 +9,7 @@ Course::Course(std::string cName, std::string cDesc) {
 }
 
 float Course::calc_grade() {
+    std::cout << this->task_list[1].name << '\n';
     // Calculates the total grade of the student
     float total;
     // Calculate weighted average
@@ -58,11 +60,13 @@ void Course::add_grade(std::string name, float weight_achieved) {
     // Adds a grade into the specified task, throws exception if the Task does not exist
     // Also calculates a new grade for the task and stores it
     Task* current = nullptr;
+    int x = 0;
     for(Task t : this->task_list) {
         if(t.name == name) {
             current = &t;
             break;
         }
+        x++;
     }
     if(current == nullptr) {
         throw;
@@ -74,6 +78,7 @@ void Course::add_grade(std::string name, float weight_achieved) {
         total += i;
     }
     total /= current->grade_list.size();
-    current->grade = total;
+    this->task_list[x].grade = total;
+    std::cout << this->task_list[x].grade << '\n';
 }
 

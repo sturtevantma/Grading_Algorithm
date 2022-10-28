@@ -9,13 +9,13 @@ int main() {
 
 
     CSC_212.add_task("Labs" , "5%", 0.05);
-    CSC_212.add_task("Programming Assignments" , "50%", 0.50);
+    CSC_212.add_task("Assignments" , "50%", 0.50);
     CSC_212.add_task("Term Project" , "35%", 0.35);
     CSC_212.add_task("Final Exam" , "10%", 0.1);
     CSC_212.add_task("Review Project" , "3%", 0.03);
 
     CSC_212.add_grade("Labs", 0.90);
-    CSC_212.add_grade("Programming Assignments", 100.0);
+    CSC_212.add_grade("Assignments", 1.0);
     CSC_212.add_grade("Term Project", 0.85);
     CSC_212.add_grade("Final Exam", 0.80);
     CSC_212.add_grade("Review Project", 0.83);
