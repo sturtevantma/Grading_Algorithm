@@ -26,10 +26,10 @@ Course::Course(std::string cLetter, float cGrade, float cWeight) {
 
     std::string Course::calc_grade_letter() {
 
-        if (final_Grade >= 93) {
+        if (final_Grade >= 94) {
             letter = "A";
         }
-        else if (final_Grade >= 90 && final_Grade < 93){
+        else if (final_Grade >= 90 && final_Grade < 94){
             letter = "A-";
         }
         else if (final_Grade >= 87 && final_Grade < 90) {
