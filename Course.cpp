@@ -26,15 +26,40 @@ Course::Course(std::string cLetter, float cGrade, float cWeight) {
 
     std::string Course::calc_grade_letter() {
 
-        if (final_Grade >= 90) {
+        if (final_Grade >= 93) {
             letter = "A";
-        } else if (final_Grade >= 80 && final_Grade < 90) {
+        }
+        else if (final_Grade >= 90 && final_Grade < 93){
+            letter = "A-";
+        }
+        else if (final_Grade >= 87 && final_Grade < 90) {
+            letter = "B+";
+        } 
+        else if (final_Grade >= 83 && final_Grade < 87) {
             letter = "B";
-        } else if (final_Grade >= 70 && final_Grade < 80) {
+        } 
+        else if (final_Grade >= 80 && final_Grade < 83) {
+            letter = "B-";
+        } 
+        else if (final_Grade >= 77 && final_Grade < 80) {
+            letter = "C+";
+        }
+        else if (final_Grade >= 73 && final_Grade < 77) {
             letter = "C";
-        } else if (final_Grade >= 60 && final_Grade < 70) {
+        } 
+        else if (final_Grade >= 70 && final_Grade < 73) {
+            letter = "C-";
+        }  
+        else if (final_Grade >= 67 && final_Grade < 70) {
+            letter = "D+";
+        }
+        else if (final_Grade >= 63 && final_Grade < 67) {
             letter = "D";
-        } else if (final_Grade < 60) {
+        } 
+        else if (final_Grade >= 60 && final_Grade < 63) {
+            letter = "D-";
+        }  
+        else if (final_Grade < 60) {
             letter = "F";
         }
         return letter;
