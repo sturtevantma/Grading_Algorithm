@@ -28,6 +28,7 @@ Returns the corresponding letter grade to the number returned by `Course::calc_g
 `Course::add_task()`  
 Appends a new task to the list  
 `Course::add_grade()`  
-Adds achieved weight to a task. See [Task](#Task)
-`Course::get_num_grade()`
-Returns the product of the weight and 100.
+Adds achieved weight to a task. See [Task](#Task)  
+`Course::get_num_grade()`. 
+Returns the product of the weight and 100. 
+
