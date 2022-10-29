@@ -79,6 +79,5 @@ void Course::add_grade(std::string name, float weight_achieved) {
     }
     total /= current->grade_list.size();
     this->task_list[x].grade = total;
-    std::cout << this->task_list[x].grade << '\n';
 }
 
