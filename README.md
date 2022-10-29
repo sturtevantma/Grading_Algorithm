@@ -13,7 +13,7 @@ This is a program which calculated a student's weighted average for CSC 212 by u
 category as well as the weight of each category as a part of the entire grade. The output of the program is both
 A numerical representation and the letter grade corresponding with it.
 
-Repo Address: 
+Repo Address: https://github.com/sturtevantma/Grading_Algorithm
 
 # Documentation
 

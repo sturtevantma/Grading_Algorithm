@@ -9,7 +9,6 @@ Course::Course(std::string cName, std::string cDesc) {
 }
 
 float Course::calc_grade() {
-    std::cout << this->task_list[1].name << '\n';
     // Calculates the total grade of the student
     float total;
     // Calculate weighted average
