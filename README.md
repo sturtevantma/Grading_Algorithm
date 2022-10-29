@@ -55,7 +55,7 @@ Assigns a name, description, and weight to a Task object
 
 ### How to Compile
 For the actual percentage representation for each category, the user needs to hard code their grade for each category before compiling.
-When compiling, you need to type 'g++ main.cpp Course.cpp Task.cpp'
-To execute, type './a.exe'
+When compiling, you need to type `g++ main.cpp Course.cpp Task.cpp`
+To execute, type `./a.exe`
 There is no additional input needed because the current grade of the student is hard coded.
 The final grade and letter grade equivalent will be provided as output.
